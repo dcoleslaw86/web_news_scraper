@@ -1,0 +1,24 @@
+{
+  "name": "web_news_scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcoleslaw86/web_news_scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcoleslaw86/web_news_scraper/issues"
+  },
+  "homepage": "https://github.com/dcoleslaw86/web_news_scraper#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0"
+  }
+}
