@@ -53,7 +53,7 @@ router.get("/scrape", function(req, res) {
         console.log("Not saved to DB, missing data");
         }
     });
-        res.redirect("/");
+        // res.redirect("/");
     });
 });
 
@@ -113,7 +113,7 @@ router.get("/articles-json", function(req, res) {
   
             $(".l-col__main").each(function(i, element) {
               hbsObj.body = $(this)
-                .children(".css-1l4spti")
+                // .children(".css-1l4spti")
                 .children("p")
                 .text();
   
