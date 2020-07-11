@@ -17,7 +17,7 @@ router.get("/scrape", function(req, res) {
     var $ = cheerio.load(html);
     var titlesArray = [];
 
-    $(".css-185go5a e1o5byef0").each(function(i, element) {
+    $(".css-1l4spti").each(function(i, element) {
         var result = {};
 
         result.title = $(this)
