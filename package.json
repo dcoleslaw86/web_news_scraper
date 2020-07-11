@@ -1,7 +1,7 @@
 {
   "name": "web_news_scraper",
   "version": "1.0.0",
-  "description": "All the News That's Fit to Scrape",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,7 @@
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.6",
+    "express-handlebars": "^5.0.0",
     "mongoose": "^5.9.23",
     "morgan": "^1.10.0",
     "request": "^2.88.2"

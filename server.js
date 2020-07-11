@@ -24,7 +24,7 @@ app.listen(PORT, function(){
 });
 
 //mongoose.connect("mongodb://localhost/web_news_scraper");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/web_news_scraper";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds027335.mlab.com:27335/heroku_d530fq8f";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
