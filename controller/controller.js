@@ -5,15 +5,15 @@ var path = require("path");
 var request = require("request");
 var cheerio = require("cheerio");
 
-var Comment = require("../models/Comment.js");
-var Article = require("../models/Article.js");
+var Comment = require("../models/comment.js");
+var Article = require("../models/article.js");
 
 router.get("/", function(req, res) {
     res.redirect("/articles");
 });
 
 router.get("/scrape", function(req, res) {
-    request("https://www.nytimes.com/section/sports/baseball", function(error, response, html) {
+    request("https://www.nytimes.com/section/sports/baseball", function(err, res, html) {
     var $ = cheerio.load(html);
     var titlesArray = [];
 
@@ -82,16 +82,16 @@ router.get("/articles-json", function(req, res) {
     .lean();
 });
 
-router.get("/clearAll", function(req, res) {
-    Article.remove({}, function(err, doc) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("removed all articles");
-      }
-    });
-    res.redirect("/articles-json");
-  });
+// router.get("/clearAll", function(req, res) {
+//     Article.remove({}, function(err, doc) {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         console.log("removed all articles");
+//       }
+//     });
+//     res.redirect("/articles-json");
+//   });
   
   router.get("/readArticle/:id", function(req, res) {
     var articleId = req.params.id;
@@ -108,12 +108,12 @@ router.get("/clearAll", function(req, res) {
         } else {
           hbsObj.article = doc;
           var link = doc.link;
-          request(link, function(error, response, html) {
+          request(link, function(err, res, html) {
             var $ = cheerio.load(html);
   
             $(".l-col__main").each(function(i, element) {
               hbsObj.body = $(this)
-                .children(".c-entry-content")
+                .children(".css-1l4spti")
                 .children("p")
                 .text();
   
