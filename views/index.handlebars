@@ -1,0 +1,23 @@
+<div>
+    <h2 class="card z-depth-3 center-align">Read the latest from New York Times!</h2>
+    <div class="row">
+        <div class="col sm-3">
+            <h5 class="card z-depth-3 center-align col">Click 'Scrape' to get the latest articles!</h5>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="col left-align">
+            {{#each article}}
+
+                <div class="card-panel">
+                    <h4>{{this.title}}</h4>
+                    <a href="/readArticle/{{ this._id }}" class="waves-effect waves-light btn indigo" id="btnSignUp">Read Article</a>
+                </div>
+
+            {{/each}}
+        </div>
+    </div>
+</div>
